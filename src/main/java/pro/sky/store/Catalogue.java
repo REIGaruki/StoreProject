@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 @Repository
 public class Catalogue {
-    private ArrayList<Product> goods = new ArrayList<Product>(Arrays.asList(
+    private static ArrayList<Product> goods = new ArrayList<Product>(Arrays.asList(
             new Product("Apple"),
             new Product("Orange"),
             new Product("Lemon"),
@@ -16,7 +16,8 @@ public class Catalogue {
             new Product("Pear")
     ));
 
-    public ArrayList<Product> getGoods() {
+
+    public static ArrayList<Product> getGoods() {
         return goods;
     }
 }

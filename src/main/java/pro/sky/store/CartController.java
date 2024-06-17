@@ -18,11 +18,11 @@ public class CartController {
     }
 
     @GetMapping(path="/add")
-    public ArrayList<Product> addToCart(@RequestParam(value = "ids") ArrayList<Integer> addedGoods) {
+    public HashSet<Product> addToCart(@RequestParam(value = "ids") ArrayList<Integer> addedGoods) {
         return cartService.addToCart(addedGoods);
     }
     @GetMapping(path="/get")
-    public HashSet<Product> viewCart(@RequestParam(value = "ids") ArrayList<Integer> addedGoods) {
-        return new HashSet<Product>();
+    public HashSet<Product> viewCart() {
+        return cartService.viewCart();
     }
 }
