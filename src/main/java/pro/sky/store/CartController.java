@@ -18,7 +18,7 @@ public class CartController {
     }
 
     @GetMapping(path="/add")
-    public HashSet<Product> addToCart(@RequestParam(value = "ids") ArrayList<Integer> addedGoods) {
+    public ArrayList<Integer> addToCart(@RequestParam(value = "ids") ArrayList<Integer> addedGoods) {
         return cartService.addToCart(addedGoods);
     }
     @GetMapping(path="/get")

@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 
 public interface CartService {
-    HashSet<Product> addToCart(ArrayList<Integer> addedGoods);
+    ArrayList<Integer> addToCart(ArrayList<Integer> addedGoods);
 
     HashSet<Product> viewCart();
 
